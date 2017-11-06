@@ -87,25 +87,25 @@ class RezultatHandler(BaseHandler):
             return self.write("Sadly, 06_city is not %s.\n" % city_sixth)
 
         if len(city_seventh) == 0:
-            return ("There is no guess.\n")
+            return self.write("There is no guess.\n")
         elif city_seventh.lower == "sidney":
-            return ("You are right, 07_city is Sidney.\n")
+            return self.write("You are right, 07_city is Sidney.\n")
         elif city_seventh.lower is not "sidney":
-            return ("Nope, 07_city is not %s.\n" % city_seventh)
+            return self.write("Nope, 07_city is not %s.\n" % city_seventh)
 
         if len(city_eight) == 0:
-            return ("There is no guess.\n")
+            return self.write("There is no guess.\n")
         elif city_eighth.lower == "kairo" or "cairo":
-            return ("You are right, 08_city is Cairo.\n")
+            return self.write("You are right, 08_city is Cairo.\n")
         elif city_eighth.lower is not "kairo" or "cairo":
-            return ("Mistake, 08_city is not %s.\n" % city_eighth)
+            return self.write("Mistake, 08_city is not %s.\n" % city_eighth)
 
         if len(city_ninth) == 0:
-            return ("There is no guess.\n")
+            return self.write("There is no guess.\n")
         elif city_nineth.lower == "sarajevo":
-            return ("You are right, 09_city is Sarajevo.\n")
+            return self.write("You are right, 09_city is Sarajevo.\n")
         elif city_nineth.lower is not "sarajevo":
-            return ("Nein, 09_city is not %s.\n" % city_nineth)
+            return self.write("Nein, 09_city is not %s.\n" % city_nineth)
 
 
 app = webapp2.WSGIApplication([
